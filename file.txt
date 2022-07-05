@@ -1,0 +1,9 @@
+2
+dev,2
+diz,2
+5
+Мark,dev,3,120
+Lili,diz,5,130
+Fruy,diz,2,400
+Toly,dev,6,200
+Molly,diz,2,190

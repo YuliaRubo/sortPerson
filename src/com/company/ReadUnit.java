@@ -26,21 +26,28 @@ public static List getAllPersonSort(List<Person>listPerson, List<Vacancy>listVac
     List<Vacancy> listVacancyNew = listVacancy;
     List<Person> newList = new ArrayList<>();
     String nameVacancy = null;
-    int number = 0;
+    int limit = 0;
     int vacancySize = listVacancyNew.size();
-    int count =0;
+    int count = 0;
     for (Vacancy v : listVacancyNew) {
         nameVacancy = v.getNameVacancy();
-        number = v.getNumberOnVacancy();
-        //for(int i =0; i<number; i++)
-            for (Person p : listPersonNew) {
-            if(nameVacancy.equals(p.getVacancyName())){
+        limit = v.getNumberOnVacancy();
+        for (Person p : listPersonNew) {
+            if (nameVacancy.equals(p.getVacancyName())) {
                 newList.add(p);
-    }
-        }
-    }
-    return listPersonNew;
+                count++;
+                if (count == limit) {
+                    break;
+                }
+                }
+            }
+        for (Person p1 : newList) {
+        System.out.println(p1);
+    }}
+    return newList;
 }
+
+
 
 public static List getAllPersonOnlySort(List<Person>sortPerson){
     List<Person>treeSetPerson =sortPerson;
@@ -53,10 +60,7 @@ public static List getAllPersonOnlySort(List<Person>sortPerson){
             }
             return result;
         }
-
     });
-
-
     return treeSetPerson;
 }}
 

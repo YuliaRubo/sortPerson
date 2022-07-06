@@ -30,7 +30,7 @@ public class Read {
                 getAllPerson.add(person);
             }
              newListSort = ReadUnit.getAllPersonOnlySort(getAllPerson);
-            newSort1 = ReadUnit.getAllPersonSort(newListSort, getAllVacancy);
+             ReadUnit.getAllPersonSort(newListSort, getAllVacancy);
 
 
 

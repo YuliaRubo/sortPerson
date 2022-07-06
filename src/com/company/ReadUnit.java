@@ -24,10 +24,8 @@ public static Person getAllPersonFromFile(String line1){
 public static void getAllPersonSort(List<Person>listPerson, List<Vacancy>listVacancy) {
     List<Person> listPersonNew = listPerson;
     List<Vacancy> listVacancyNew = listVacancy;
-
     String nameVacancy = null;
     int limit = 0;
-    int vacancySize = listVacancyNew.size();
     int count = 0;
     for (Vacancy v : listVacancyNew) {
         nameVacancy = v.getNameVacancy();
@@ -44,14 +42,12 @@ public static void getAllPersonSort(List<Person>listPerson, List<Vacancy>listVac
 
 }
 
-
-
 public static List getAllPersonOnlySort(List<Person>sortPerson){
     List<Person>treeSetPerson =sortPerson;
     Collections.sort(treeSetPerson, new Comparator<Person>() {
         @Override
         public int compare(Person person, Person t1) {
-            int result = person.getTasks()-t1.getTasks();
+            int result = t1.getTasks()-person.getTasks();
             if(result==0){
                 int result2 = person.getPercent()-t1.getPercent();
             }

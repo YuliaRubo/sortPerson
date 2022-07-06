@@ -33,8 +33,6 @@ public class Read {
              ReadUnit.getAllPersonSort(newListSort, getAllVacancy);
 
 
-
-
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {

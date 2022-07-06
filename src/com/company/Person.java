@@ -55,22 +55,4 @@ public class Person  {
         return namePerson;
     }
 
-
-//    @Override
-//    public int compare(Person person, Person t1) {
-//        if(person.getTasks()>t1.getTasks())
-//            return -1;
-//        else if(person.getTasks()<t1.getTasks())
-//            return 1;
-//        if(person.getTasks()==t1.getTasks()){
-//              if( person.getPercent()>t1.getPercent()){
-//          return -1;}
-//               }
-//              if( person.getPercent()<t1.getPercent()){
-//            return 1;
-//        }
-//        else
-//            return 0;
-//}
-
 }

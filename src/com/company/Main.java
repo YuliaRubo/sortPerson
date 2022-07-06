@@ -8,8 +8,5 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException, EmtySourceFile {
         List<Person> t= Read.read();
 
-
-
-       //System.out.println(t);
     }}
 

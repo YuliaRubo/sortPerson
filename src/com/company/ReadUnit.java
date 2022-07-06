@@ -21,10 +21,10 @@ public static Person getAllPersonFromFile(String line1){
     return new Person(namePerson,vacancyName,tasks,percent);
 }
 
-public static List getAllPersonSort(List<Person>listPerson, List<Vacancy>listVacancy) {
+public static void getAllPersonSort(List<Person>listPerson, List<Vacancy>listVacancy) {
     List<Person> listPersonNew = listPerson;
     List<Vacancy> listVacancyNew = listVacancy;
-    List<Person> newList = new ArrayList<>();
+
     String nameVacancy = null;
     int limit = 0;
     int vacancySize = listVacancyNew.size();
@@ -32,19 +32,16 @@ public static List getAllPersonSort(List<Person>listPerson, List<Vacancy>listVac
     for (Vacancy v : listVacancyNew) {
         nameVacancy = v.getNameVacancy();
         limit = v.getNumberOnVacancy();
+        List<Person> newList = new ArrayList<>();
         for (Person p : listPersonNew) {
             if (nameVacancy.equals(p.getVacancyName())) {
                 newList.add(p);
-                count++;
-                if (count == limit) {
-                    break;
-                }
                 }
             }
-        for (Person p1 : newList) {
-        System.out.println(p1);
+        for (int i =0; i<limit; i++) {
+        System.out.println(newList.get(i).getNamePerson());
     }}
-    return newList;
+
 }
 
 
